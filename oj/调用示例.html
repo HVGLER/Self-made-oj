@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>在线判题</title>
+</head>
+<body>
+    <h1>在线判题系统</h1>
+    
+    <select id="language">
+        <option value="python">Python</option>
+        <option value="cpp">C++</option>
+        <option value="c">C</option>
+        <option value="java">Java</option>
+        <option value="javascript">JavaScript</option>
+    </select>
+    
+    <textarea id="code" rows="10" cols="50">
+# 在这里写代码
+a = int(input())
+b = int(input())
+print(a + b)
+    </textarea>
+    
+    <textarea id="testcases" rows="5" cols="50">
+[
+    {"input": "1\n2", "output": "3"},
+    {"input": "5\n3", "output": "8"}
+]
+    </textarea>
+    
+    <button onclick="runJudge()">运行判题</button>
+    
+    <div id="result"></div>
+
+    <script>
+    async function runJudge() {
+        const code = document.getElementById('code').value;
+        const language = document.getElementById('language').value;
+        const testcases = JSON.parse(document.getElementById('testcases').value);
+        
+        const response = await fetch('http://localhost:8080/judge', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                code: code,
+                language: language,
+                test_cases: testcases
+            })
+        });
+        
+        const result = await response.json();
+        document.getElementById('result').innerHTML = 
+            '<pre>' + JSON.stringify(result, null, 2) + '</pre>';
+    }
+    </script>
+</body>
+</html>
