@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hhj's oj</title>
+    <style>
+        /* 全局重置与基础 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* 柔和的渐变背景 */
+            background: linear-gradient(145deg, #f8f9fc 0%, #e9edf4 100%);
+            font-family: "微软雅黑", "Microsoft YaHei", sans-serif;
+            padding: 1.5rem;
+        }
+
+        /* 主卡片容器 - 让内容更集中 */
+        .card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(6px);
+            padding: 3rem 4rem;
+            border-radius: 2.5rem;
+            box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.15),
+                        0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            transition: transform 0.25s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 30px 60px -16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 主文字 - 保留加粗，放大并增加层次 */
+        .main-text {
+            font-family: "微软雅黑", "Microsoft YaHei", sans-serif;
+            font-size: 3.2rem;          /* 更大更醒目 */
+            font-weight: 700;            /* 更粗 */
+            color: #1e293b;
+            letter-spacing: 4px;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #1e293b 0%, #475569 80%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            user-select: none;
+        }
+
+        /* 装饰性分隔线 */
+        .divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #94a3b8, #cbd5e1);
+            border-radius: 10px;
+            margin: 0 auto 1.8rem auto;
+        }
+
+        /* 超链接 - 美化成胶囊按钮 */
+        .btn-link {
+            display: inline-block;
+            padding: 0.7rem 2.2rem;
+            font-family: "微软雅黑", "Microsoft YaHei", sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+            background: #3b82f6;
+            text-decoration: none;
+            border-radius: 60px;
+            box-shadow: 0 8px 18px -6px rgba(59, 130, 246, 0.4);
+            transition: all 0.25s ease;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-link:hover {
+            background: #2563eb;
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 14px 28px -8px rgba(59, 130, 246, 0.5);
+        }
+
+        .btn-link:active {
+            transform: scale(0.96);
+        }
+
+        /* 小提示：让“wow”旁边加个箭头，更活泼 */
+        .btn-link::after {
+            content: " →";
+            transition: transform 0.2s ease;
+            display: inline-block;
+        }
+
+        .btn-link:hover::after {
+            transform: translateX(4px);
+        }
+
+        /* 响应式：小屏适配 */
+        @media (max-width: 480px) {
+            .card {
+                padding: 2rem 1.5rem;
+            }
+            .main-text {
+                font-size: 2.6rem;
+            }
+            .btn-link {
+                font-size: 1rem;
+                padding: 0.6rem 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+  <div class="card">
+    <!-- 您的 <p> 内容，加粗和字体已继承并增强 -->
+    <div class="main-text">GESP2023年3月份考试</div>
+    <div class="divider"></div>
+    <!-- 您的超链接，已美化为按钮 -->
+    <a href="http://127.0.0.1:1279/GESP2303.html" target="_blank" class="btn-link">前往</a>
+</div>
+<div class="card">
+  <!-- 您的 <p> 内容，加粗和字体已继承并增强 -->
+  <div class="main-text">两数之和 - 编程题</div>
+  <div class="divider"></div>
+  <!-- 您的超链接，已美化为按钮 -->
+  <a href="http://127.0.0.1:1279/两数之和.html" target="_blank" class="btn-link">前往</a>
+</div>
+
+  <p>
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+    <br>              <!-- ← 这个 <br> 产生一个空行 -->
+
+
+                           hhj考试 is powered by hhj考试oj
+</p>
+
+</body>
+</html>
