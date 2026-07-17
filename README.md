@@ -5,3 +5,5 @@
 # 咋运行？
 首先，你的电脑要安装Python3.8以上的Python版本
 第二，运行main.py，然后再运行oj/judge_core.py
+# 咋加题目？
+请自觉复制粘贴，改题目
