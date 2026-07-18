@@ -1,5 +1,5 @@
 # Self-made-hhjoj
-
+[the English vesion readme?]([https://mirrors.aliyun.com/python-release/windows/python-3.8.10.exe](https://github.com/HVGLER/Self-made-oj/blob/main/README_en.md))<br>
 开源免费的判题系统，有题库。整体编程语言只有Python 和 html
 
 # 关于题库
