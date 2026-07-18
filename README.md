@@ -50,6 +50,9 @@
 
 请自觉复制粘贴，改题目
 
+# 关于我为啥要搞GithubPages
+因为在电脑上安装好了这个oj，可以快捷的访问oj，并且在github的加持下不必我多说。
+
 # 本程序完全跨平台
 
 支持windows7~windows11，linux，macos<br>
