@@ -51,7 +51,8 @@
 请自觉复制粘贴，改题目
 
 # 关于我为啥要搞GithubPages
-给你们体验的啦，都是静态网页，只有一个后端判题。只不过用GithubPages做不了编程题，GESP可以。
+给你们体验的啦，都是静态网页，只有一个后端判题。只不过用GithubPages做不了编程题，GESP可以。<br>
+https://hvgler.github.io/Self-made-oj/
 
 # 本程序完全跨平台
 
