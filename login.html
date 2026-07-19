@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录HHJ-OJ · Login</title>
+</head>
+<body>
+
+    <h2>用户登录</h2>
+    
+    <form action="index.html" method="get" onsubmit="return handleLogin()">
+        <p>
+            <label>用户名</label><br>
+            <input type="text" name="username" id="username" placeholder="请输入用户名">
+        </p>
+        <p>
+            <label>密码</label><br>
+            <input type="password" name="password" id="password" placeholder="请输入密码">
+        </p>
+        <p>
+            <button type="submit">登录</button>
+        </p>
+    </form>
+
+    <script>
+        /**
+         * 最简单的登录验证函数
+         * 预设账号 admin，密码 admin123
+         * 验证通过弹出提示并返回 true（允许提交），否则显示错误信息并返回 false（阻止提交）
+         */
+        function handleLogin() {
+            // 获取输入值（去除首尾空格）
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            // 预设账号密码（硬编码）
+            const VALID_USERNAME = 'admin';
+            const VALID_PASSWORD = 'admin123';
+
+            // 获取消息显示元素
+            const messageEl = document.getElementById('message');
+
+            // 验证逻辑
+            if (username === '' || password === '') {
+                messageEl.textContent = '⚠️ 用户名和密码不能为空！';
+                return false;   // 阻止表单提交
+            }
+
+            if (username === VALID_USERNAME && password === VALID_PASSWORD) {
+                // 验证成功：弹出欢迎信息，并允许提交（实际项目中可跳转）
+                alert('✅ 登录成功！欢迎回来，' + username);
+                // 清空消息（可选）
+                messageEl.textContent = '';
+                // 返回 true 允许表单提交（此处 action="#" 刷新页面，演示效果）
+                return true;
+            } else {
+                // 验证失败：显示错误提示
+                messageEl.textContent = '❌ 用户名或密码错误，请重试。';
+                return false;   // 阻止表单提交
+            }
+        }
+
+        // 额外：为了让页面加载时默认显示提示（方便测试），但无样式，只做提示
+        // 这里可选在页面加载时展示默认账号信息（但不强制）
+        window.onload = function() {
+            const msg = document.getElementById('message');
+            // 提示预设账号（纯文字，无样式）
+            msg.textContent = '💡 预设账号: admin  /  密码: admin123';
+        };
+    </script>
+
+    <!-- 
+        备注：
+        - 完全无 CSS，所有样式为浏览器默认。
+        - 预设账号 admin，密码 admin123 硬编码在 JavaScript 中。
+        - 输入框默认填充了 admin / admin123 方便快速测试。
+        - 登录验证通过 alert 弹窗提示成功，并允许表单提交（演示刷新）。
+        - 验证失败会在表单下方显示文本错误信息。
+        - 所有逻辑均为原生 JavaScript，无任何外部依赖。
+    -->
+</body>
+</html>
