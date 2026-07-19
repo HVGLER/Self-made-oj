@@ -32,6 +32,10 @@ install Homebrew：<br>
 Regarding why there is Python, it is because macOS does not come with Python pre-installed (**older versions used to have Python 2.7 pre-installed between macOS versions 10.8 and 12.3, the system did indeed come with Python 2.7 pre-installed. However, this version has long officially end-of-life, and Apple has removed it in subsequent system updates)<br>
 # How to add a question?
 Please copy and paste voluntarily, and change the title.
+
+# Why I decided to set up GitHub Pages
+It's for you to experience; they are all static webpages with only a single backend for judging. It's just that GitHub Pages can't handle programming problems, but GESP can.<br>
+https://hvgler.github.io/Self-made-oj/
 # This program is completely cross-platform
 Supports Windows 7~Windows 11, Linux, macOS<br>
 As long as your computer can install/use Python and a browser, you can use this OJ<br>
